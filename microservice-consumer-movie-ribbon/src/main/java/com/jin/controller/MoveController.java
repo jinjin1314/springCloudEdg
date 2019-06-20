@@ -24,11 +24,11 @@ public class MoveController {
 
     @RequestMapping("user/{id}")
     public String findById(@PathVariable int id) {
-        return this.restTemplate.getForObject(userServiceUrl + id, String.class, new String[]{});
+        return this.restTemplate.getForObject(userServiceUrl+"getUser/" + id, String.class, new String[]{});
     }
 
     @RequestMapping("testPort")
     public String testPort() {
-        return this.restTemplate.getForObject("http://microservice-provider-user/port/", String.class);
+        return this.restTemplate.getForObject(userServiceUrl+"port", String.class);
     }
 }

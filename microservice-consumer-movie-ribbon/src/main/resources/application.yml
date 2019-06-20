@@ -20,4 +20,4 @@ eureka:
     prefer-ip-address: true
 
 user:
-   userServiceUrl: http://microservice-provider-user/getUser/
+   userServiceUrl: http://microservice-provider-user/

@@ -14,6 +14,12 @@ spring:
     mode: HTML5
     encoding: UTF-8
     cache: false
+
+#mybatis配置
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+  type-aliases-package: com.jin.entity
+
 #端口
 server:
   port: 8762
@@ -22,7 +28,3 @@ eureka:
   client:
     service-url:
      defaultZone: http://localhost:8761/eureka/
-#mybatis配置
-mybatis:
-  mapper-locations: classpath:mapping/*Mapper.xml
-  type-aliases-package: com.jin.entity
